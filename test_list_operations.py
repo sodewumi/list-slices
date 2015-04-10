@@ -134,18 +134,18 @@ class TestListOperations(unittest.TestCase):
                                       'Do', 'Re'])
         self.assertEqual(self.multiples, [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30])
 
-    # def test_2_C_custom_extend(self):
-    #     custom_extend(self.months, ['Bin', 'Tri', 'Hex'])
-    #     custom_extend(self.notes, ['Re', 'Mi', 'Fa', 'So'])
-    #     custom_extend(self.multiples, [30, 33, 36, 39, 42, 45])
+    def test_2_C_custom_extend(self):
+        custom_extend(self.months, ['Bin', 'Tri', 'Hex'])
+        custom_extend(self.notes, ['Re', 'Mi', 'Fa', 'So'])
+        custom_extend(self.multiples, [30, 33, 36, 39, 42, 45])
 
-    #     self.assertEqual(self.months, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-    #                                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
-    #                                    'Bin', 'Tri', 'Hex'])
-    #     self.assertEqual(self.notes, ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti',
-    #                                   'Do', 'Re', 'Mi', 'Fa', 'So'])
-    #     self.assertEqual(self.multiples, [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30,
-    #                                       33, 36, 39, 42, 45])
+        self.assertEqual(self.months, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                                       'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
+                                       'Bin', 'Tri', 'Hex'])
+        self.assertEqual(self.notes, ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti',
+                                      'Do', 'Re', 'Mi', 'Fa', 'So'])
+        self.assertEqual(self.multiples, [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30,
+                                          33, 36, 39, 42, 45])
 
     # def test_2_D_custom_insert(self):
     #     custom_insert(self.months, 8, 'Hex')

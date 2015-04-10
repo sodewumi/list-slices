@@ -216,7 +216,8 @@ def custom_extend(input_list, second_list):
     like input_list.extend(second_list), should append every item in the second
     list to the end of the first list and return nothing
     """
-
+    for i in range(len(second_list)):
+        input_list[-1:] = [input_list[-1]] + [second_list[i]]    
     pass
 
 
