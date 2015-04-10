@@ -187,8 +187,10 @@ def custom_len(input_list):
     """
     like len(input_list), should return the number of items in the list
     """
-
-    return 0
+    cnt = 0
+    for i in input_list:
+        cnt += 1
+    return cnt
 
 
 # For the next four exercises, you'll need to be clever and think about ways
@@ -205,7 +207,7 @@ def custom_append(input_list, value):
     like input_list.append(value), should add the value to the end of the list
     and return nothing
     """
-
+    input_list[0:-1] = value
     pass
 
 
