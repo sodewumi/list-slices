@@ -243,7 +243,6 @@ def custom_remove(input_list, value):
             break
         cnt += 1
 
-    print cnt
     input_list[cnt:cnt+1] = []
 
     pass
@@ -263,7 +262,15 @@ def custom_index(input_list, value):
     which matches the specified value
     """
 
-    return 0
+    found = False
+    cnt = 0
+    while not found:
+        if input_list[cnt] == value:
+            found = True
+        else:
+            cnt += 1
+
+    return cnt
 
 
 def custom_count(input_list, value):
@@ -272,7 +279,11 @@ def custom_count(input_list, value):
     value appears in the list.
     """
 
-    return 0
+    cnt = 0
+    for ch in input_list:
+        if ch == value:
+            cnt += 1
+    return cnt
 
 
 def custom_reverse(input_list):
@@ -280,7 +291,7 @@ def custom_reverse(input_list):
     like input_list.reverse(), should reverse the elements of the original list
     and return nothing (we call this reversing "in place")
     """
-
+    input_list[0:] = input_list[::-1]
     pass
 
 
@@ -291,7 +302,10 @@ def custom_contains(input_list, value):
     statement -- find another way to solve it!
     """
 
-    return None
+    for wrd in input_list:
+        if wrd == value:
+            return True
+    return False
 
 
 def custom_equality(some_list, another_list):
@@ -300,7 +314,12 @@ def custom_equality(some_list, another_list):
     the same values in the same indexes
     """
 
-    return None
+    if len(some_list) != len(another_list):
+        return False
+    for i in range(len(some_list)):
+        if some_list[i] != another_list[i]:
+            return False
+    return True
 
 
 ##############################################################################
