@@ -207,7 +207,7 @@ def custom_append(input_list, value):
     like input_list.append(value), should add the value to the end of the list
     and return nothing
     """
-    input_list[0:-1] = value
+    input_list[-1:] = [input_list[-1], value]
     pass
 
 
