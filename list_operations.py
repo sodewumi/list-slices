@@ -226,7 +226,7 @@ def custom_insert(input_list, index, value):
     like input_list.insert(index, value), should insert (not replace) the value
     at the specified index of the input list and return nothing
     """
-    input_list[index:index] = value 
+    input_list[index:index] = [value] 
     pass
 
 
