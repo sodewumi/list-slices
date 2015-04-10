@@ -250,12 +250,11 @@ def custom_remove(input_list, value):
 
 
 def custom_pop(input_list):
-    """
-    like input_list.pop(), should remove the last item in the list and
-    return it
-    """
+    last = input_list[-1]
 
-    return None
+    input_list[0:] = input_list[:-1] 
+
+    return last
 
 
 def custom_index(input_list, value):
