@@ -235,6 +235,16 @@ def custom_remove(input_list, value):
     like input_list.remove(value), should remove the first item of the
     value specified and return nothing
     """
+    found = False
+    cnt = 0
+    while not found:
+        if input_list[cnt] == value:
+            found = True
+            break
+        cnt += 1
+
+    print cnt
+    input_list[cnt:cnt+1] = []
 
     pass
 
